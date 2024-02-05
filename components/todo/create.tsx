@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import todoService from "@/services/todoService";
 import { ITodo } from "@/types/todo";
