@@ -33,7 +33,7 @@ const TodoListPage = () => {
     try {
       const result = await confirm(data.title);
       if (!result) return;
-      await todoService.deleteTodo(data._id);
+      await todoService.deleteTodo(data._id ||'');
       setTodos(todos.filter((todo) => todo._id !== data._id));
       fetchTodos();
     } catch (error: any) {

@@ -39,7 +39,7 @@ const CreateEditTodoModal: React.FC<CreateEditTodoModalProps> = ({
         updatedTodo = await todoService.createTodo(title, description);
         msgSuccess("Create TODO List Success!");
       } else {
-        if (todo) {
+        if (todo && todo?._id) {
           updatedTodo = await todoService.updateTodo(todo._id, title, description);
           msgSuccess("Update TODO List Success!");
         }
